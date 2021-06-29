@@ -1,0 +1,35 @@
+<h2>Detalles de compra</h2>
+
+<div class="row">
+    <table class="table" >
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of shoppingCart; ">
+              <th>{{product.product.name}}</th>
+              <th>{{product.ammount}}</th>
+              <th>{{product.product.price}}</th>
+          </tr>
+        </tbody>
+      </table>
+
+    
+</div>
+<div class="row">
+    
+    <hr>
+    <span>SubTotal: <span id = "subtotal">0</span></span>
+</div>
+<div class="row">
+    <span>iva(%19): <span id = "iva">0</span></span>
+</div>
+<hr>
+<div class="row">
+    <span>Total: <span id = "total">0</span></span>
+</div>
+<a id ="product1" type="button" class="btn btn-primary" onclick="alert('Pago recibido, sus productos llegaran el dia de mañana')" href="/form/product.html">Pagar</a>
